@@ -1390,7 +1390,7 @@
   ImageViewer.defaults = {
     zoomValue: 100,
     snapView: true,
-    maxZoom: 1000,
+    maxZoom: 2000,
     refreshOnResize: true,
     zoomOnMouseWheel: true
   };
