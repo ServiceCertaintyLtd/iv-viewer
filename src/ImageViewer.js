@@ -18,20 +18,11 @@ import {
 
 import Slider from './Slider';
 
-const imageViewHtml = `
-  <div class="iv-loader"></div>
-  <div class="iv-snap-view">
-    <div class="iv-snap-image-wrap">
-      <div class="iv-snap-handle"></div>
-    </div>
-    <div class="iv-zoom-slider">
-      <div class="iv-zoom-handle"></div>
-    </div>
-  </div>
-  <div class="iv-image-view" >
-    <div class="iv-image-wrap" ></div>
-  </div>
-`;
+const imageViewHtml = 
+  `<div class="iv-loader"></div>
+  <div class="iv-image-view">
+    <div class="iv-image-wrap"></div>
+  </div>`;
 
 class ImageViewer {
   constructor (element, options = {}) {
@@ -151,6 +142,18 @@ class ImageViewer {
       tagName: 'div',
       className: 'iv-wrap',
       html: imageViewHtml,
+      parent: container,
+    });
+
+    createElement({
+      tagName: 'div',
+      className: 'iv-snap-view',
+      html: `<div class="iv-snap-image-wrap">
+        <div class="iv-snap-handle"></div>
+      </div>
+      <div class="iv-zoom-slider">
+        <div class="iv-zoom-handle"></div>
+      </div>`,
       parent: container,
     });
 

@@ -503,7 +503,7 @@
     return Slider;
   }();
 
-  var imageViewHtml = "\n  <div class=\"iv-loader\"></div>\n  <div class=\"iv-snap-view\">\n    <div class=\"iv-snap-image-wrap\">\n      <div class=\"iv-snap-handle\"></div>\n    </div>\n    <div class=\"iv-zoom-slider\">\n      <div class=\"iv-zoom-handle\"></div>\n    </div>\n  </div>\n  <div class=\"iv-image-view\" >\n    <div class=\"iv-image-wrap\" ></div>\n  </div>\n";
+  var imageViewHtml = "<div class=\"iv-loader\"></div>\n  <div class=\"iv-image-view\">\n    <div class=\"iv-image-wrap\"></div>\n  </div>";
 
   var ImageViewer = /*#__PURE__*/function () {
     function ImageViewer(element) {
@@ -776,6 +776,12 @@
           tagName: 'div',
           className: 'iv-wrap',
           html: imageViewHtml,
+          parent: container
+        });
+        createElement({
+          tagName: 'div',
+          className: 'iv-snap-view',
+          html: "<div class=\"iv-snap-image-wrap\">\n        <div class=\"iv-snap-handle\"></div>\n      </div>\n      <div class=\"iv-zoom-slider\">\n        <div class=\"iv-zoom-handle\"></div>\n      </div>",
           parent: container
         }); // add container class on the container
 
