@@ -137,8 +137,12 @@ export function clamp (num, min, max) {
 export function assignEvent (element, events, handler) {
   if (typeof events === 'string') events = [events];
 
+  let options = {
+    passive: false
+  }
+
   events.forEach((event) => {
-    element.addEventListener(event, handler);
+    element.addEventListener(event, handler, options);
   });
 
   return () => {

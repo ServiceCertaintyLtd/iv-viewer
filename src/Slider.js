@@ -81,14 +81,14 @@ class Slider {
   }
 
   init () {
-    ['touchstart', 'mousedown'].forEach((evt) => {
-      this.container.addEventListener(evt, this.startHandler, {passive: true});
+    ['touchstart', 'mousedown'].forEach((event) => {
+      this.container.addEventListener(event, this.startHandler, {passive: true});
     });
   }
 
   destroy () {
-    ['touchstart', 'mousedown'].forEach((evt) => {
-      this.container.removeEventListener(evt, this.startHandler);
+    ['touchstart', 'mousedown'].forEach((event) => {
+      this.container.removeEventListener(event, this.startHandler);
     });
     this.removeListeners();
   }
