@@ -378,11 +378,10 @@
   }
   function assignEvent(element, events, handler) {
     if (typeof events === 'string') events = [events];
-    var options = {
-      passive: false
-    };
     events.forEach(function (event) {
-      element.addEventListener(event, handler, options);
+      element.addEventListener(event, handler, {
+        passive: false
+      });
     });
     return function () {
       events.forEach(function (event) {
@@ -486,9 +485,7 @@
         var _this2 = this;
 
         ['touchstart', 'mousedown'].forEach(function (event) {
-          _this2.container.addEventListener(event, _this2.startHandler, {
-            passive: true
-          });
+          _this2.container.addEventListener(event, _this2.startHandler);
         });
       }
     }, {

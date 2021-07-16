@@ -82,7 +82,7 @@ class Slider {
 
   init () {
     ['touchstart', 'mousedown'].forEach((event) => {
-      this.container.addEventListener(event, this.startHandler, {passive: true});
+      this.container.addEventListener(event, this.startHandler);
     });
   }
 
