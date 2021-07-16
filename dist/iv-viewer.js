@@ -8,7 +8,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global = global || self, global.ImageViewer = factory());
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.ImageViewer = factory());
 }(this, (function () { 'use strict';
 
   function ownKeys(object, enumerableOnly) {
@@ -379,9 +379,7 @@
   function assignEvent(element, events, handler) {
     if (typeof events === 'string') events = [events];
     events.forEach(function (event) {
-      element.addEventListener(event, handler, {
-        passive: true
-      });
+      element.addEventListener(event, handler);
     });
     return function () {
       events.forEach(function (event) {
@@ -1346,17 +1344,17 @@
             domElement = _this$_elements7.domElement; // destroy all the sliders
 
         Object.entries(this._sliders).forEach(function (_ref) {
-          var _ref2 = _slicedToArray(_ref, 2),
-              key = _ref2[0],
-              slider = _ref2[1];
+          var _ref2 = _slicedToArray(_ref, 2);
+              _ref2[0];
+              var slider = _ref2[1];
 
           slider.destroy();
         }); // unbind all events
 
         Object.entries(this._events).forEach(function (_ref3) {
-          var _ref4 = _slicedToArray(_ref3, 2),
-              key = _ref4[0],
-              unbindEvent = _ref4[1];
+          var _ref4 = _slicedToArray(_ref3, 2);
+              _ref4[0];
+              var unbindEvent = _ref4[1];
 
           unbindEvent();
         }); // clear all the frames
