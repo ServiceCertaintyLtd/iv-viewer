@@ -844,7 +844,8 @@ class ImageViewer {
   }
   hideSnapView = () => {
     const { snapView } = this._elements;
-    css(snapView, { opacity: 0.5, pointerEvents: 'none' });
+    // css(snapView, { opacity: 0.5, pointerEvents: 'none' });
+    css(snapView, { opacity: 0.5, pointerEvents: 'inherit' });
     this._state.snapViewVisible = false;
   }
   refresh = () => {

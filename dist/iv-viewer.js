@@ -645,10 +645,11 @@
       });
 
       _defineProperty(this, "hideSnapView", function () {
-        var snapView = _this._elements.snapView;
+        var snapView = _this._elements.snapView; // css(snapView, { opacity: 0.5, pointerEvents: 'none' });
+
         css(snapView, {
           opacity: 0.5,
-          pointerEvents: 'none'
+          pointerEvents: 'inherit'
         });
         _this._state.snapViewVisible = false;
       });
