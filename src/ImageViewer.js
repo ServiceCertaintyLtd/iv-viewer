@@ -721,12 +721,7 @@ class ImageViewer {
     const { maxZoom } = _options;
 
     perc = Math.round(Math.max(100, perc));
-
-    console.log('round:' + perc);
-
     perc = Math.min(maxZoom, perc);
-
-    console.log('min:' + perc);
 
     point = point || {
       x: containerDim.w / 2,
@@ -902,7 +897,7 @@ class ImageViewer {
 ImageViewer.defaults = {
   zoomValue: 100,
   snapView: true,
-  maxZoom: 20000,
+  maxZoom: 4000,
   refreshOnResize: true,
   zoomOnMouseWheel: true,
 };
