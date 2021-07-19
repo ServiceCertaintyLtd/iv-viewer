@@ -5,7 +5,6 @@
   $handle-color: #fff;
 
   &-wrap {
-    grid-template-areas: "imageviewer preview";
   }
 
   &-container {
@@ -81,7 +80,6 @@
 
   /***** snap view css *****/
   &-snap-view {
-    grid-area: "preview";
     width: 150px;
     height: 150px;
     position: absolute;
@@ -153,7 +151,6 @@
   
   /**** snap view css end *****/
   &-image-view {
-    grid-area: "imageviewer";
     position: absolute;
     height: 100%;
     width: 100%;
@@ -178,7 +175,6 @@
   }
   
   &-loader {
-    grid-area: "imageviewer";
     top: 50%;
     left: 50%;
     border-radius: 50%;

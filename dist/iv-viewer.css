@@ -3,9 +3,6 @@
   /*** zoom slider ***/
   /**** snap view css end *****/
 }
-.iv-wrap {
-  grid-template-areas: "imageviewer preview";
-}
 .iv-container {
   overflow: hidden;
   position: relative;
@@ -67,7 +64,6 @@
   transform-origin: 50% 50%;
 }
 .iv-snap-view {
-  grid-area: "preview";
   width: 150px;
   height: 150px;
   position: absolute;
@@ -133,7 +129,6 @@
   cursor: grabbing;
 }
 .iv-image-view {
-  grid-area: "imageviewer";
   position: absolute;
   height: 100%;
   width: 100%;
@@ -154,7 +149,6 @@
   transform: translate3d(0, 0, 0);
 }
 .iv-loader {
-  grid-area: "imageviewer";
   top: 50%;
   left: 50%;
   border-radius: 50%;
