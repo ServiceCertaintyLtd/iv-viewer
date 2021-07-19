@@ -647,7 +647,7 @@
       _defineProperty(this, "hideSnapView", function () {
         var snapView = _this._elements.snapView;
         css(snapView, {
-          opacity: 0,
+          opacity: 0.5,
           pointerEvents: 'none'
         });
         _this._state.snapViewVisible = false;
@@ -726,7 +726,7 @@
           }); // hide the image and add iv-original-img class
 
           css(domElement, {
-            opacity: 0,
+            opacity: 0.5,
             position: 'relative',
             zIndex: -1
           });

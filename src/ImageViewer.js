@@ -95,7 +95,7 @@ class ImageViewer {
 
       // hide the image and add iv-original-img class
       css(domElement, {
-        opacity: 0,
+        opacity: 0.5,
         position: 'relative',
         zIndex: -1,
       });
@@ -844,7 +844,7 @@ class ImageViewer {
   }
   hideSnapView = () => {
     const { snapView } = this._elements;
-    css(snapView, { opacity: 0, pointerEvents: 'none' });
+    css(snapView, { opacity: 0.5, pointerEvents: 'none' });
     this._state.snapViewVisible = false;
   }
   refresh = () => {
